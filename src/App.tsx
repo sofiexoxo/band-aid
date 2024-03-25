@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <main className=" *:p-0 * border-b-black text-pretty p-6 font-bold underline bg-red-300">
+      <main>
         <div>
           <a href="https://vitejs.dev" target="_blank">
             <img src={viteLogo} className="logo" alt="Vite logo" />
