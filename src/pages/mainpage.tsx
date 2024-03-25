@@ -1,7 +1,9 @@
 
 function ProjectsPage() {
     return <>
-        <h1 className=" font-bold text-center  border-cyan-400 bg-white text-black">Welkom op de Hoofdpagina van Band-aid!</h1>
+        <main className="  bg-white">
+            <h1 className=" font-bold text-center  border-cyan-400 text-black">Welkom op de Hoofdpagina van Band-aid!</h1>
+        </main>
     </>
 }
 export default ProjectsPage;
