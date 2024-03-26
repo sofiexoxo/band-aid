@@ -23,7 +23,7 @@ const NavBar: React.FC = () => {
                             <Dropdown.Menu className="menu sm:w-52 mt-3">
                                 <Link to="/mainpage">Homepage</Link>
                                 <Link to="/bandpage">Bands</Link>
-                                <Dropdown.Item>Booking</Dropdown.Item>
+                                <Link to="/bookingpage">Booking</Link>
                             </Dropdown.Menu>
                         </div>
                     </div>
