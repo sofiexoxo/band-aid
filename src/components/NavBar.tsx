@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
     };
 
     return (
-        <nav className="bg-base-100 mb-40 shadow-xl rounded-box ghost">
+        <nav className="bg-base-100 shadow-xl rounded-box ghost mb-8 P-0 border-b-0">
             <div className="container mx-auto px-4 relative" data-theme="valentine">
                 <div className="flex items-center justify-between py-4">
                     <div className="flex items-center relative">
@@ -27,8 +27,8 @@ const NavBar: React.FC = () => {
                             </Dropdown.Menu>
                         </div>
                     </div>
-                    <div>
-                        <p className="btn btn-ghost text-xl">Band-Aid</p>
+                    <div className=' ml-80 mr-60'>
+                        <p className="btn btn-ghost font-bold text-3xl">Band-Aid</p>
                     </div>
                     <div className="flex items-center">
                         <button className="btn btn-ghost btn-circle">
