@@ -3,17 +3,16 @@ import { Dropdown } from 'react-daisyui';
 import { Link } from 'react-router-dom';
 import logo from "./../assets/images/bandaids.svg";
 
-const NavBar: React.FC = () => {
+interface NavBarProps {
+    isLoggedIn: boolean;
+    onLogout: () => void;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ isLoggedIn, onLogout }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
-    };
-
-    const handleLogout = () => {
-        // Handle logout logic
-        setIsLoggedIn(false);
     };
 
     return (
@@ -40,7 +39,7 @@ const NavBar: React.FC = () => {
                     </div>
                     <div className="flex items-center">
                         {isLoggedIn ? (
-                            <button onClick={handleLogout} className='btn btn-ghost text-xl'>Logout</button>
+                            <button onClick={onLogout} className='btn btn-ghost text-xl'>Logout</button>
                         ) : (
                             <>
                                 <Link to="/login" className='btn btn-ghost text-xl'>Login</Link>

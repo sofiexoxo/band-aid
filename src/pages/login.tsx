@@ -12,23 +12,33 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
+interface LoginProps {
+    onLogin: () => void; // Definieer de onLogin-prop
+}
+
 const mockLoginData = [
     { email: "user1@example.com", password: "password1" },
     { email: "user2@example.com", password: "password2" },
     { email: "user3@example.com", password: "password3" }
 ];
+
 const defaultTheme = createTheme();
-const Login = () => {
+
+const Login: React.FC<LoginProps> = ({ onLogin }) => { // Gebruik de LoginProps interface om props te typen
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
     const handleLogin = () => {
         const matchedUser = mockLoginData.find(user => user.email === email && user.password === password);
         if (matchedUser) {
-            // Perform actions after successful login
+            // Voer hier de acties uit na succesvol inloggen, zoals doorsturen naar de homepage
             console.log("Login successful");
-            // Redirect user to homepage or perform other actions
-            // For demonstration purposes, you can use window.location.href to redirect
-            window.location.href = "/"; // Redirect to homepage
+            // Roep de onLogin-functie aan om de bovenliggende component te informeren over het succesvol inloggen
+            onLogin();
+            // Redirect de gebruiker naar de homepage of voer andere acties uit
+            // Voor demonstratiedoeleinden kunt u window.location.href gebruiken om door te sturen
+            window.location.href = "/"; // Doorsturen naar de homepage
         } else {
             alert("Invalid email or password. Please try again.");
         }
