@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 const BookingPage: React.FC = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -9,9 +10,7 @@ const BookingPage: React.FC = () => {
 
     const handleBooking = (e: React.FormEvent) => {
         e.preventDefault();
-        // Voeg hier je boekingslogica toe, zoals het verzenden van de gegevens naar de backend
         console.log("Booking submitted:", { name, email, date, band });
-        // Update het aantal boekingen voor de geselecteerde band op de geselecteerde datum
         setBookings((prevBookings) => ({
             ...prevBookings,
             [date]: {
@@ -25,6 +24,7 @@ const BookingPage: React.FC = () => {
         setDate("");
         setBand("");
     };
+
 
     const bandDescriptions = [
         "BandRockers",

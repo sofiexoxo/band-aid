@@ -12,22 +12,28 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+const mockLoginData = [
+    { email: "user1@example.com", password: "password1" },
+    { email: "user2@example.com", password: "password2" },
+    { email: "user3@example.com", password: "password3" }
+];
 const defaultTheme = createTheme();
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const handleLogin = () => {
-        // Simulate login logic (replace this with actual authentication logic)
-        if (email === "example@example.com" && password === "password") {
+        const matchedUser = mockLoginData.find(user => user.email === email && user.password === password);
+        if (matchedUser) {
             // Perform actions after successful login
             console.log("Login successful");
             // Redirect user to homepage or perform other actions
             // For demonstration purposes, you can use window.location.href to redirect
             window.location.href = "/"; // Redirect to homepage
         } else {
-            // Handle login failure
             alert("Invalid email or password. Please try again.");
         }
+        setEmail("");
+        setPassword("");
     };
 
     return (

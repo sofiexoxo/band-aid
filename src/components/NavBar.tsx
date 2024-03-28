@@ -5,9 +5,15 @@ import logo from "./../assets/images/bandaids.svg";
 
 const NavBar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
+    };
+
+    const handleLogout = () => {
+        // Handle logout logic
+        setIsLoggedIn(false);
     };
 
     return (
@@ -33,8 +39,14 @@ const NavBar: React.FC = () => {
                         <img src={logo} alt="Logo" className="h-8 w-auto ml-2" />
                     </div>
                     <div className="flex items-center">
-                        <Link to="/login" className='btn btn-ghost text-xl'>Login</Link>
-                        <Link to="/register" className='btn btn-ghost text-xl'>Register</Link>
+                        {isLoggedIn ? (
+                            <button onClick={handleLogout} className='btn btn-ghost text-xl'>Logout</button>
+                        ) : (
+                            <>
+                                <Link to="/login" className='btn btn-ghost text-xl'>Login</Link>
+                                <Link to="/register" className='btn btn-ghost text-xl'>Register</Link>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>
