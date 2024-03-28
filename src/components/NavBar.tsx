@@ -27,7 +27,7 @@ const NavBar: React.FC = () => {
                             </Dropdown.Menu>
                         </div>
                     </div>
-                    <div className=' ml-80 mr-60'>
+                    <div className=' ml-80 mr-40'>
                         <p className="btn btn-ghost font-bold text-3xl">Band-Aid</p>
                     </div>
                     <div className="flex items-center">
