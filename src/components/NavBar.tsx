@@ -21,7 +21,7 @@ const NavBar: React.FC = () => {
                         </button>
                         <div className={`dropdown-menu absolute ${isOpen ? '' : 'hidden'} z-[1] top-full left-0 mt-2`}>
                             <Dropdown.Menu className="menu sm:w-52 mt-3">
-                                <Link to="/mainpage">Homepage</Link>
+                                <Link to="/">Homepage</Link>
                                 <Link to="/bandpage">Bands</Link>
                                 <Link to="/bookingpage">Booking</Link>
                             </Dropdown.Menu>

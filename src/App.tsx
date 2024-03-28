@@ -10,7 +10,7 @@ const App: React.FC = () => {
         <Router basename="/Band-aid/">
             <Navbar />
             <Routes>
-                <Route path="/mainpage" element={<ProjectsPage />} />
+                <Route path="/" element={<ProjectsPage />} />
                 <Route path="/bandpage" element={<BandPage />} />
                 <Route path="/bookingpage" element={<BookingPage />} />
             </Routes>
