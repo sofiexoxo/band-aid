@@ -31,13 +31,8 @@ const NavBar: React.FC = () => {
                         <p className="btn btn-ghost font-bold text-3xl">Band-Aid</p>
                     </div>
                     <div className="flex items-center">
-                        <button className="btn btn-ghost btn-circle">
-                            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                        </button>
-                        <a href="#" className="btn btn-ghost text-xl">Login</a>
-                        <a href="#" className="btn btn-ghost text-xl">Register</a>
+                        <Link to="/login" className='btn btn-ghost text-xl'>Login</Link>
+                        <Link to="/register" className='btn btn-ghost text-xl'>Register</Link>
                     </div>
                 </div>
             </div>
