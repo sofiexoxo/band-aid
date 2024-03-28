@@ -2,20 +2,24 @@ import { Avatar, Box, Button, Container, CssBaseline, Grid, TextField, Typograph
 import { LockOutlined } from "@mui/icons-material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 const Register = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isRegistered, setIsRegistered] = useState(false);
+    const navigate = useNavigate();
 
     const handleRegister = () => {
-        // Simulate registration logic
-        // For demonstration purposes, we're just setting isRegistered to true after a short delay
+        setIsRegistered(true);
         setTimeout(() => {
-            setIsRegistered(true);
+            // Redirect to login page
+            navigate("/login");
         }, 1000);
     };
+
 
     return (
         <Container maxWidth="xs">

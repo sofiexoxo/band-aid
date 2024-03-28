@@ -16,7 +16,19 @@ const defaultTheme = createTheme();
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const handleLogin = () => { };
+    const handleLogin = () => {
+        // Simulate login logic (replace this with actual authentication logic)
+        if (email === "example@example.com" && password === "password") {
+            // Perform actions after successful login
+            console.log("Login successful");
+            // Redirect user to homepage or perform other actions
+            // For demonstration purposes, you can use window.location.href to redirect
+            window.location.href = "/"; // Redirect to homepage
+        } else {
+            // Handle login failure
+            alert("Invalid email or password. Please try again.");
+        }
+    };
 
     return (
         <>
