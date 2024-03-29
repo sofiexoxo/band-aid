@@ -9,9 +9,9 @@ const ProjectsPage: React.FC = () => {
                 <header className="bg-base-100 mb-0 shadow-xl rounded-box" >
                 </header>
                 <div className="flex flex-col items-end rounded-lg content-wrapper">
-                    <h1 className="font-bold text-pink-300 text-3xl m-10 mb-5 ">Welkom op de Hoofdpagina van Band-aid!</h1>
-                    <p className="font-bold  m-10 mb-0">Op deze website kunt u verschillende bands booken,</p>
-                    <p className="font-bold mr-10">wij beschikken van een grote variatie van verschillende bands.</p>
+                    <h1 className="font-bold text-pink-300 text-3xl m-5 mb-0 ">Welkom op de Hoofdpagina van Band-aid!</h1>
+                    <p className="font-bold  m-5 mb-0">Op deze website kunt u verschillende bands booken,</p>
+                    <p className="font-bold mr-5">wij beschikken van een grote variatie van verschillende bands.</p>
                 </div>
             </main>
         </>
