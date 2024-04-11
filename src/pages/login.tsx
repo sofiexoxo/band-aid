@@ -12,17 +12,11 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { mockLoginData } from "../mockData/loginData";
 
 interface LoginProps {
     onLogin: () => void; // Definieer de onLogin-prop
 }
-
-const mockLoginData = [
-    { email: "user1@example.com", password: "password1" },
-    { email: "user2@example.com", password: "password2" },
-    { email: "user3@example.com", password: "password3" }
-];
-
 const defaultTheme = createTheme();
 
 const Login: React.FC<LoginProps> = ({ onLogin }) => { // Gebruik de LoginProps interface om props te typen

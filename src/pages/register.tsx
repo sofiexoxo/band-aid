@@ -15,7 +15,7 @@ const Register = () => {
     const handleRegister = () => {
         setIsRegistered(true);
         setTimeout(() => {
-            // Redirect to login page
+            // Redirect to login pagina
             navigate("/login");
         }, 1000);
     };
