@@ -68,6 +68,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => { // Gebruik de LoginProps 
                                 autoFocus
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+
                             />
 
                             <TextField
