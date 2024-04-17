@@ -1,5 +1,5 @@
 import React from "react";
-import YourImage from "../components/images";
+import YourImage from "../components/bandgalery";
 const BandPage: React.FC = () => {
     const bandDescriptions = [
         "BandRockers",
