@@ -13,7 +13,6 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { mockLoginData } from "../mockData/loginData";
-
 interface LoginProps {
     onLogin: () => void; // Definieer de onLogin-prop
 }
