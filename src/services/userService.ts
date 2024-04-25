@@ -39,14 +39,3 @@ const postBook = await client.POST("/api/book", {
         band: "band",
     },
 });
-
-
-
-const myMiddleware: Middleware = {
-    async onRequest(req, options) {
-        // set "foo" header
-        req.headers.set("foo", "bar");
-        return req;
-    },
-};
-client.use(myMiddleware);
