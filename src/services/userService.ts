@@ -18,13 +18,27 @@ const postToken = await client.POST("/api/token", {
         client_secret: "",
     }
 });
-const postRegister = await client.POST("/api/register", (req, res) {
+const postRegister = await client.POST("/api/register", {
+    params: {
+        query: { dsn: "dsn" },
+    },
     body: {
         email: "string",
-            password: "string",
+        password: "string",
     },
 });
 
+const postLogout = await client.POST("/api/logout");
+
+
+const postBook = await client.POST("/api/book", {
+    body: {
+        name: "name",
+        email: "string",
+        date: "date",
+        band: "band",
+    },
+});
 
 
 
