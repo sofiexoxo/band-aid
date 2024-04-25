@@ -13,7 +13,7 @@ const throwOnError: Middleware = {
     },
 };
 
-const client = createClient<paths>({ baseUrl: "http://127.0.0.1:8000/" });
+const client = createClient<paths>({ baseUrl: "/" });
 
 client.use(throwOnError);
 
