@@ -21,10 +21,10 @@
                 }
             }
         },
-        "/token": {
+        "/api/token": {
             "post": {
                 "summary": "Login For Access Token",
-                "operationId": "login_for_access_token_token_post",
+                "operationId": "login_for_access_token_api_token_post",
                 "parameters": [
                     {
                         "name": "dsn",
@@ -41,7 +41,7 @@
                     "content": {
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/Body_login_for_access_token_token_post"
+                                "$ref": "#/components/schemas/Body_login_for_access_token_api_token_post"
                             }
                         }
                     }
@@ -68,10 +68,10 @@
                 }
             }
         },
-        "/register": {
+        "/api/register": {
             "post": {
                 "summary": "Register",
-                "operationId": "register_register_post",
+                "operationId": "register_api_register_post",
                 "parameters": [
                     {
                         "name": "dsn",
@@ -115,10 +115,10 @@
                 }
             }
         },
-        "/logout": {
+        "/api/logout": {
             "post": {
                 "summary": "Logout",
-                "operationId": "logout_logout_post",
+                "operationId": "logout_api_logout_post",
                 "responses": {
                     "200": {
                         "description": "Successful Response",
@@ -131,10 +131,10 @@
                 }
             }
         },
-        "/book": {
+        "/api/book": {
             "post": {
                 "summary": "Book",
-                "operationId": "book_book_post",
+                "operationId": "book_api_book_post",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -167,10 +167,10 @@
                 }
             }
         },
-        "/bands": {
+        "/api/bands": {
             "get": {
                 "summary": "Get Bands",
-                "operationId": "get_bands_bands_get",
+                "operationId": "get_bands_api_bands_get",
                 "responses": {
                     "200": {
                         "description": "Successful Response",
@@ -186,7 +186,7 @@
     },
     "components": {
         "schemas": {
-            "Body_login_for_access_token_token_post": {
+            "Body_login_for_access_token_api_token_post": {
                 "properties": {
                     "grant_type": {
                         "anyOf": [
@@ -241,7 +241,7 @@
                     "username",
                     "password"
                 ],
-                "title": "Body_login_for_access_token_token_post"
+                "title": "Body_login_for_access_token_api_token_post"
             },
             "Booking": {
                 "properties": {

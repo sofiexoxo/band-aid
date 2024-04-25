@@ -21,7 +21,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/token": {
+    "/api/token": {
         parameters: {
             query?: never;
             header?: never;
@@ -31,14 +31,14 @@ export interface paths {
         get?: never;
         put?: never;
         /** Login For Access Token */
-        post: operations["login_for_access_token_token_post"];
+        post: operations["login_for_access_token_api_token_post"];
         delete?: never;
         options?: never;
         head?: never;
         patch?: never;
         trace?: never;
     };
-    "/register": {
+    "/api/register": {
         parameters: {
             query?: never;
             header?: never;
@@ -48,14 +48,14 @@ export interface paths {
         get?: never;
         put?: never;
         /** Register */
-        post: operations["register_register_post"];
+        post: operations["register_api_register_post"];
         delete?: never;
         options?: never;
         head?: never;
         patch?: never;
         trace?: never;
     };
-    "/logout": {
+    "/api/logout": {
         parameters: {
             query?: never;
             header?: never;
@@ -65,14 +65,14 @@ export interface paths {
         get?: never;
         put?: never;
         /** Logout */
-        post: operations["logout_logout_post"];
+        post: operations["logout_api_logout_post"];
         delete?: never;
         options?: never;
         head?: never;
         patch?: never;
         trace?: never;
     };
-    "/book": {
+    "/api/book": {
         parameters: {
             query?: never;
             header?: never;
@@ -82,14 +82,14 @@ export interface paths {
         get?: never;
         put?: never;
         /** Book */
-        post: operations["book_book_post"];
+        post: operations["book_api_book_post"];
         delete?: never;
         options?: never;
         head?: never;
         patch?: never;
         trace?: never;
     };
-    "/bands": {
+    "/api/bands": {
         parameters: {
             query?: never;
             header?: never;
@@ -97,7 +97,7 @@ export interface paths {
             cookie?: never;
         };
         /** Get Bands */
-        get: operations["get_bands_bands_get"];
+        get: operations["get_bands_api_bands_get"];
         put?: never;
         post?: never;
         delete?: never;
@@ -110,8 +110,8 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
-        /** Body_login_for_access_token_token_post */
-        Body_login_for_access_token_token_post: {
+        /** Body_login_for_access_token_api_token_post */
+        Body_login_for_access_token_api_token_post: {
             /** Grant Type */
             grant_type?: string | null;
             /** Username */
@@ -189,7 +189,7 @@ export interface operations {
             };
         };
     };
-    login_for_access_token_token_post: {
+    login_for_access_token_api_token_post: {
         parameters: {
             query: {
                 dsn: string;
@@ -200,7 +200,7 @@ export interface operations {
         };
         requestBody: {
             content: {
-                "application/x-www-form-urlencoded": components["schemas"]["Body_login_for_access_token_token_post"];
+                "application/x-www-form-urlencoded": components["schemas"]["Body_login_for_access_token_api_token_post"];
             };
         };
         responses: {
@@ -224,7 +224,7 @@ export interface operations {
             };
         };
     };
-    register_register_post: {
+    register_api_register_post: {
         parameters: {
             query: {
                 dsn: string;
@@ -259,7 +259,7 @@ export interface operations {
             };
         };
     };
-    logout_logout_post: {
+    logout_api_logout_post: {
         parameters: {
             query?: never;
             header?: never;
@@ -279,7 +279,7 @@ export interface operations {
             };
         };
     };
-    book_book_post: {
+    book_api_book_post: {
         parameters: {
             query?: never;
             header?: never;
@@ -312,7 +312,7 @@ export interface operations {
             };
         };
     };
-    get_bands_bands_get: {
+    get_bands_api_bands_get: {
         parameters: {
             query?: never;
             header?: never;

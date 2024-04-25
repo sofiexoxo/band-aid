@@ -3,10 +3,10 @@ import type { paths } from "../lib/api/v1";
 
 const client = createClient<paths>({ baseUrl: "/" });
 
-const { data, error } = await client.GET("/bands");
+const getBands = await client.GET("/bands");
 
 
-const { data, error } = await client.POST("/register", {
+const postRegister = await client.POST("/register", {
     body: {
         email: "string",
         password: "string",
