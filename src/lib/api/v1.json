@@ -21,10 +21,10 @@
                 }
             }
         },
-        "/api/token": {
+        "/api/login": {
             "post": {
                 "summary": "Login For Access Token",
-                "operationId": "login_for_access_token_api_token_post",
+                "operationId": "login_for_access_token_api_login_post",
                 "parameters": [
                     {
                         "name": "dsn",
@@ -41,7 +41,7 @@
                     "content": {
                         "application/x-www-form-urlencoded": {
                             "schema": {
-                                "$ref": "#/components/schemas/Body_login_for_access_token_api_token_post"
+                                "$ref": "#/components/schemas/Body_login_for_access_token_api_login_post"
                             }
                         }
                     }
@@ -186,7 +186,7 @@
     },
     "components": {
         "schemas": {
-            "Body_login_for_access_token_api_token_post": {
+            "Body_login_for_access_token_api_login_post": {
                 "properties": {
                     "grant_type": {
                         "anyOf": [
@@ -241,7 +241,7 @@
                     "username",
                     "password"
                 ],
-                "title": "Body_login_for_access_token_api_token_post"
+                "title": "Body_login_for_access_token_api_login_post"
             },
             "Booking": {
                 "properties": {

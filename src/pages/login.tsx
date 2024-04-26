@@ -12,7 +12,8 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { mockLoginData } from "../mockData/loginData";
+//import { mockLoginData } from "../mockData/loginData";
+import { getToken } from "../services/userService";
 interface LoginProps {
     onLogin: () => void; // Definieer de onLogin-prop
 }
@@ -22,9 +23,11 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => { // Gebruik de LoginProps 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleLogin = () => {
-        const matchedUser = mockLoginData.find(user => user.email === email && user.password === password);
-        if (matchedUser) {
+    const handleLogin = async () => {
+        const postToken = await getToken("dsn", "grant_type", "username", "password", "scope", "client_id", "client_secret");
+        if (postToken) {
+            //const matchedUser = mockLoginData.find(user => user.email === email && user.password === password);
+            //if (matchedUser) {
             // Voer hier de acties uit na succesvol inloggen, zoals doorsturen naar de homepage
             console.log("Login successful");
             // Roep de onLogin-functie aan om de bovenliggende component te informeren over het succesvol inloggen

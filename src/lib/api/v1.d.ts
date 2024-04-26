@@ -21,7 +21,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/api/token": {
+    "/api/login": {
         parameters: {
             query?: never;
             header?: never;
@@ -31,7 +31,7 @@ export interface paths {
         get?: never;
         put?: never;
         /** Login For Access Token */
-        post: operations["login_for_access_token_api_token_post"];
+        post: operations["login_for_access_token_api_login_post"];
         delete?: never;
         options?: never;
         head?: never;
@@ -110,8 +110,8 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
-        /** Body_login_for_access_token_api_token_post */
-        Body_login_for_access_token_api_token_post: {
+        /** Body_login_for_access_token_api_login_post */
+        Body_login_for_access_token_api_login_post: {
             /** Grant Type */
             grant_type?: string | null;
             /** Username */
@@ -189,7 +189,7 @@ export interface operations {
             };
         };
     };
-    login_for_access_token_api_token_post: {
+    login_for_access_token_api_login_post: {
         parameters: {
             query: {
                 dsn: string;
@@ -200,7 +200,7 @@ export interface operations {
         };
         requestBody: {
             content: {
-                "application/x-www-form-urlencoded": components["schemas"]["Body_login_for_access_token_api_token_post"];
+                "application/x-www-form-urlencoded": components["schemas"]["Body_login_for_access_token_api_login_post"];
             };
         };
         responses: {
