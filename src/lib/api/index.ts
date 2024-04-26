@@ -9,7 +9,7 @@ const throwOnError: Middleware = {
                 : await res.clone().text();
             throw new Error(body);
         }
-        return undefined;
+        return res;
     },
 };
 
