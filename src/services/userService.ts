@@ -8,7 +8,7 @@ const getBands = async () => {
 }
 
 export const getToken = async (dsn: string, grant_type: string, username: string, password: string, scope: string, client_id: string, client_secret: string) => {
-    return client.POST("/api/token", {
+    return client.POST("/api/login", {
         params: {
             query: { dsn: dsn },
         },
