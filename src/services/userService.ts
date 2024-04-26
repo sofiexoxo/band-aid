@@ -37,7 +37,7 @@ const logoutUser = async () => {
 }
 
 
-const bookBand = async (name: string, email: string, date: string, band: string) => {
+export const bookBand = async (name: string, email: string, date: string, band: string) => {
     return client.POST("/api/book", {
         body: {
             name: name,

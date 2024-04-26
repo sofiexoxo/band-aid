@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { bookBand } from "../services/userService";
 
 const BookingPage: React.FC = () => {
     const [name, setName] = useState("");
@@ -8,21 +8,27 @@ const BookingPage: React.FC = () => {
     const [band, setBand] = useState("");
     const [bookings, setBookings] = useState<{ [date: string]: { [bandName: string]: number } }>({});
 
-    const handleBooking = (e: React.FormEvent) => {
+    const handleBooking = async (e: React.FormEvent) => {
         e.preventDefault();
         console.log("Booking submitted:", { name, email, date, band });
-        setBookings((prevBookings) => ({
-            ...prevBookings,
-            [date]: {
-                ...prevBookings[date],
-                [band]: (prevBookings[date]?.[band] || 0) + 1,
-            }
-        }));
-        // Reset het formulier na het indienen
-        setName("");
-        setEmail("");
-        setDate("");
-        setBand("");
+        try {
+            await bookBand(name, email, date, band);
+            setBookings((prevBookings) => ({
+                ...prevBookings,
+                [date]: {
+                    ...prevBookings[date],
+                    [band]: (prevBookings[date]?.[band] || 0) + 1,
+                }
+            }));
+            setName("");
+            setEmail("");
+            setDate("");
+            setBand("");
+        } catch (error) {
+            console.error("Error occurred while booking:", error);
+            // Handle error here, if necessary
+        }
+
     };
 
 

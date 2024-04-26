@@ -29,9 +29,10 @@
                     {
                         "name": "dsn",
                         "in": "query",
-                        "required": true,
+                        "required": false,
                         "schema": {
                             "type": "string",
+                            "default": "postgresql://sofie:Schatje123@localhost:5432/my_database",
                             "title": "Dsn"
                         }
                     }
@@ -76,9 +77,10 @@
                     {
                         "name": "dsn",
                         "in": "query",
-                        "required": true,
+                        "required": false,
                         "schema": {
                             "type": "string",
+                            "default": "postgresql://sofie:Schatje123@localhost:5432/my_database",
                             "title": "Dsn"
                         }
                     }
@@ -131,10 +133,10 @@
                 }
             }
         },
-        "/api/book": {
+        "/api/bookingpage": {
             "post": {
                 "summary": "Book",
-                "operationId": "book_api_book_post",
+                "operationId": "book_api_bookingpage_post",
                 "requestBody": {
                     "content": {
                         "application/json": {

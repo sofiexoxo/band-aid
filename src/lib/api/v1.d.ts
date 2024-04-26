@@ -72,7 +72,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/api/book": {
+    "/api/bookingpage": {
         parameters: {
             query?: never;
             header?: never;
@@ -82,7 +82,7 @@ export interface paths {
         get?: never;
         put?: never;
         /** Book */
-        post: operations["book_api_book_post"];
+        post: operations["book_api_bookingpage_post"];
         delete?: never;
         options?: never;
         head?: never;
@@ -191,8 +191,8 @@ export interface operations {
     };
     login_for_access_token_api_login_post: {
         parameters: {
-            query: {
-                dsn: string;
+            query?: {
+                dsn?: string;
             };
             header?: never;
             path?: never;
@@ -226,8 +226,8 @@ export interface operations {
     };
     register_api_register_post: {
         parameters: {
-            query: {
-                dsn: string;
+            query?: {
+                dsn?: string;
             };
             header?: never;
             path?: never;
@@ -279,7 +279,7 @@ export interface operations {
             };
         };
     };
-    book_api_book_post: {
+    book_api_bookingpage_post: {
         parameters: {
             query?: never;
             header?: never;
