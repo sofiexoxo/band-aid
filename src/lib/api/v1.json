@@ -168,22 +168,6 @@
                     }
                 }
             }
-        },
-        "/api/bands": {
-            "get": {
-                "summary": "Get Bands",
-                "operationId": "get_bands_api_bands_get",
-                "responses": {
-                    "200": {
-                        "description": "Successful Response",
-                        "content": {
-                            "application/json": {
-                                "schema": {}
-                            }
-                        }
-                    }
-                }
-            }
         }
     },
     "components": {

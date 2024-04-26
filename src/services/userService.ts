@@ -3,9 +3,6 @@ import type { paths } from "../lib/api/v1";
 
 const client = createClient<paths>({ baseUrl: "/" });
 
-const getBands = async () => {
-    return await client.GET("/api/bands");
-}
 
 export const getToken = async (dsn: string, username: string, password: string) => {
     return client.POST("/api/login", {
