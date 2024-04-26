@@ -38,7 +38,7 @@ const logoutUser = async () => {
 
 
 export const bookBand = async (name: string, email: string, date: string, band: string) => {
-    return client.POST("/api/book", {
+    return client.POST("/api/bookingpage", {
         body: {
             name: name,
             email: email,
