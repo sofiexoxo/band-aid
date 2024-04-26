@@ -29,25 +29,23 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => { // Gebruik de LoginProps 
         try {
             const tokenData = await getToken(
                 "dsn",
-                "grant_type",
                 email,
                 password,
-                "scope",
-                "client_id",
-                "client_secret"
             );
-            //const matchedUser = mockLoginData.find(user => user.email === email && user.password === password);
-            //if (matchedUser) {
-            // Voer hier de acties uit na succesvol inloggen, zoals doorsturen naar de homepage
-            console.log("Login successful");
-            // Roep de onLogin-functie aan om de bovenliggende component te informeren over het succesvol inloggen
-            onLogin();
-            // Redirect de gebruiker naar de homepage of voer andere acties uit
-            // Voor demonstratiedoeleinden kunt u window.location.href gebruiken om door te sturen
-            window.location.href = "/"; // Doorsturen naar de homepage
-            //} else {
-            //alert("Invalid email or password. Please try again.");
-            //}
+            if (tokenData) {
+                console.log("Login successful");
+                onLogin();
+                //const matchedUser = mockLoginData.find(user => user.email === email && user.password === password);
+                //if (matchedUser) {
+                // Redirect de gebruiker naar de homepage of voer andere acties uit
+                // Voor demonstratiedoeleinden kunt u window.location.href gebruiken om door te sturen
+                window.location.href = "/"; // Doorsturen naar de homepage
+                //} else {
+                //alert("Invalid email or password. Please try again.");
+                //}
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
         } catch (error) {
             alert("Invalid email or password. Please try again.");;
         }

@@ -7,22 +7,19 @@ const getBands = async () => {
     return await client.GET("/api/bands");
 }
 
-export const getToken = async (dsn: string, grant_type: string, username: string, password: string, scope: string, client_id: string, client_secret: string) => {
+export const getToken = async (dsn: string, username: string, password: string) => {
     return client.POST("/api/login", {
         params: {
             query: { dsn: dsn },
         },
         body: {
-            grant_type: grant_type,
             username: username,
             password: password,
-            scope: scope,
-            client_id: client_id,
-            client_secret: client_secret,
+            scope: ""
         }
     });
 };
-const registerUser = async (dsn: string, email: string, password: string) => {
+export const registerUser = async (dsn: string, email: string, password: string) => {
     return client.POST("/api/register", {
         params: {
             query: { dsn: dsn },
