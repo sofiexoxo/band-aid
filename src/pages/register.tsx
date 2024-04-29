@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { registerUser } from "../services/userService";
 
 const Register = () => {
-    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isRegistered, setIsRegistered] = useState(false);
@@ -43,18 +42,7 @@ const Register = () => {
                 <Typography variant="h5">Register</Typography>
                 <Box sx={{ mt: 3 }}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
-                            <TextField
-                                name="name"
-                                required
-                                fullWidth
-                                id="name"
-                                label="Name"
-                                autoFocus
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                            />
-                        </Grid>
+
                         <Grid item xs={12}>
                             <TextField
                                 required
