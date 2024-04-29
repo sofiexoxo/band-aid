@@ -5,7 +5,7 @@ const client = createClient<paths>({ baseUrl: "/" });
 
 
 export const getToken = async (dsn: string, username: string, password: string) => {
-    return client.POST("/api/login", {
+    return await client.POST("/api/login", {
         params: {
             query: { dsn: dsn },
         },
@@ -17,7 +17,7 @@ export const getToken = async (dsn: string, username: string, password: string) 
     });
 };
 export const registerUser = async (dsn: string, email: string, password: string) => {
-    return client.POST("/api/register", {
+    return await client.POST("/api/register", {
         params: {
             query: { dsn: dsn },
         },
@@ -35,7 +35,7 @@ const logoutUser = async () => {
 
 
 export const bookBand = async (name: string, email: string, date: string, band: string) => {
-    return client.POST("/api/bookingpage", {
+    return await client.POST("/api/bookingpage", {
         body: {
             name: name,
             email: email,
